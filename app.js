@@ -12,7 +12,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: 'https://zen-clients.netlify.app',
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://zen-clients.netlify.app/']
+    : ['http://localhost:3000'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
