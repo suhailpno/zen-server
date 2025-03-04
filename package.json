@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",  
+    "dev": "nodemon server.js",
     "kill": "npx kill-port 3001 3002 3003 3004"
   },
   "dependencies": {
