@@ -5,11 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-<<<<<<< HEAD
-    "dev": "node server.js",
-=======
-    "dev": "nodemon server.js",
->>>>>>> 82b9766 (Initial commit for zen-client)
+    "dev": "nodemon server.js",  
     "kill": "npx kill-port 3001 3002 3003 3004"
   },
   "dependencies": {
