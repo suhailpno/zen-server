@@ -13,11 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-<<<<<<< HEAD
-    ? ['https://zen-clients.netlify.app/']
-=======
     ? ['https://zen-clients.netlify.app']
->>>>>>> 82b9766 (Initial commit for zen-client)
     : ['http://localhost:3000'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -29,6 +25,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/movies', movieRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/users', userRoutes);
+
+// Add this route before your other routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the Movie Ticket Booking API!' });
+});
 
 // Test route
 app.get('/api/test', (req, res) => {
