@@ -13,7 +13,11 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
+<<<<<<< HEAD
     ? ['https://zen-clients.netlify.app/']
+=======
+    ? ['https://zen-clients.netlify.app']
+>>>>>>> 82b9766 (Initial commit for zen-client)
     : ['http://localhost:3000'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
